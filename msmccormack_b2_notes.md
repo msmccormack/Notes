@@ -5,12 +5,6 @@ Matt McCormack
 The first case study of block two that we are going to looking at is dealing with wireless sensor node data.
 In the discussions/block 2 portion of blackboard, our classmates posted all their questions/concerns/thoughts on this case study and how we might approach these data for our own use. Particular questions seemed to include how we will identify duplicates in some situations and when do sensors turn on in relation to other sensors.
 
-### Excercise 2.1: My Group (Group 3)'s Approach
-(Group members: Matt, Kimya, Conrad, Keagan, Connor, and Monica)
-* We began by creating a function to both load the data in and aggregate the data to get the arithmetic mean, based on a specified time horizon.
-** For this, we used the read.csv function to load in each url as an R data frame, naming each with the respective last 3 digits of the time the data was from.
-* We then created a function to deal with data deduplication.
-
 ### Discussion Board Posts
 #### Defining Duplicates
 Pseudo code for defining duplicates:
@@ -53,3 +47,11 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 #### Temporal Data
 1) Maybe create vectors of numbers to represent month, day, hour, minute, second (pros: numeric, easy to aggregate, easy to filter with) rather than using strings
 2) Look for an R package that processes the date and time data we have for ease of comparison
+
+
+### Excercise 2.1: My Group (Group 3)'s Approach
+(Group members: Matt, Kimya, Conrad, Keagan, Connor, and Monica)
+* We began by creating a function to both load the data in and aggregate the data to get the arithmetic mean, based on a specified time horizon.
+** For this, we used the read.csv function to load in each url as an R data frame, naming each with the respective last 3 digits of the time the data was from.
+**
+* We then created a function to deal with data deduplication.
