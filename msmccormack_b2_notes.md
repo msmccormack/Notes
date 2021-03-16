@@ -16,18 +16,30 @@ In the discussions/block 2 portion of blackboard, our classmates posted all thei
 Pseudo code for defining duplicates:
 
 read each file into a dataframe
+
 initialize a vector of length equivalent to rows in the dataframe
+
 iterate over rows in time column
+
 look at each subsequent row and see if its within 7:30 minutes, if it is, add false to our vector. else, true
 
+
 data <- read the data
+
 vector <- c()
+
 for (row in data){
+
     time_cur <- row
+    
     time_next <- row+1
+    
     if (time_next-time_cur>450){
+    
        vector <- c(vector, FALSE)}
+       
     else{
+    
         vector <- c(vector, TRUE)}
         
 #### The Game Plan
