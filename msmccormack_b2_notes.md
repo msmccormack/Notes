@@ -34,7 +34,7 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
     
         time_next <- row+1
     
-        if (time_next-time_cur>450){
+        if (time_next-time_cur<450){
     
            vector <- c(vector, FALSE)}
        
