@@ -23,25 +23,24 @@ iterate over rows in time column
 
 look at each subsequent row and see if its within 7:30 minutes, if it is, add false to our vector. else, true
 
-{
-data <- read the data
 
-vector <- c()
+    data <- read the data
 
-for (row in data){
+    vector <- c()
 
-    time_cur <- row
+    for (row in data){
+
+        time_cur <- row
     
-    time_next <- row+1
+        time_next <- row+1
     
-    if (time_next-time_cur>450){
+        if (time_next-time_cur>450){
     
-       vector <- c(vector, FALSE)}
+           vector <- c(vector, FALSE)}
        
-    else{
+        else{
     
-        vector <- c(vector, TRUE)}
-}
+           vector <- c(vector, TRUE)}
         
 #### The Game Plan
 1) Read in all the data
