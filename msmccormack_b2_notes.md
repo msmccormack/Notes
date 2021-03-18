@@ -1,11 +1,11 @@
 # Notes for Block 2
 Matt McCormack
 
-## Case study: Wireless Sensor Node Data
+## Case study 1: Wireless Sensor Node Data
 The first case study of block two that we are going to looking at is dealing with wireless sensor node data.
 In the discussions/block 2 portion of blackboard, our classmates posted all their questions/concerns/thoughts on this case study and how we might approach these data for our own use. Particular questions seemed to include how we will identify duplicates in some situations and when do sensors turn on in relation to other sensors.
 
-### Discussion Board Posts
+### Discussion Board Posts for Case Study 1:
 #### Defining Duplicates
 Pseudo code for defining duplicates:
 
@@ -55,3 +55,12 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 ** For this, we used the read.csv function to load in each url as an R data frame, naming each with the respective last 3 digits of the time the data was from.
 **
 * We then created a function to deal with data deduplication.
+
+## Case Study 2: Working with FLUXNET Tower Data
+The second case study looked into FLUXNET tower data. This data consists of a network of towers that measure energy and gas fluctuations between the Earth's surface and the atmosphere. There are times when sensors malfunction, operations are interupted, or other factors that cause gaps in the datasets. Our goal with this case study is to figure out how to reconstruct missing data. 
+
+### Discussion Board Posts for Case Study 1:
+
+####
+
+### Exercise 2.2: My Group's Approach
