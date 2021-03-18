@@ -53,8 +53,7 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 (Group members: Matt, Kimya, Conrad, Keagan, Connor, and Monica)
 * We began by creating a function to both load the data in and aggregate the data to get the arithmetic mean, based on a specified time horizon.
 ** For this, we used the read.csv function to load in each url as an R data frame, naming each with the respective last 3 digits of the time the data was from.
-**
-* We then created a function to deal with data deduplication.
+* We then created a function to deal with data deduplication. The code for this is as follows:
 
 ## Case Study 2: Working with FLUXNET Tower Data
 The second case study looked into FLUXNET tower data. This data consists of a network of towers that measure energy and gas fluctuations between the Earth's surface and the atmosphere. There are times when sensors malfunction, operations are interupted, or other factors that cause gaps in the datasets. Our goal with this case study is to figure out how to reconstruct missing data. 
