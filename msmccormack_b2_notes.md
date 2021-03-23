@@ -58,6 +58,11 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 ## Case Study 2: Working with FLUXNET Tower Data
 The second case study looked into FLUXNET tower data. This data consists of a network of towers that measure energy and gas fluctuations between the Earth's surface and the atmosphere. There are times when sensors malfunction, operations are interupted, or other factors that cause gaps in the datasets. Our goal with this case study is to figure out how to reconstruct missing data. 
 
+### Gap Filling
+In case study 2, we end up with large gaps in the discrete time series. Every half an hour, we should have an observation; however, there are clearly lots of gaps. How do we fill in the gaps?
+* How do we model radiation?
+* * Modelling radiation depends a lot about time. 
+
 ### Discussion Board Posts for Case Study 1:
 
 ####
