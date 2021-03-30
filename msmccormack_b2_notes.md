@@ -51,6 +51,7 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 
 ### Excercise 2.1: My Group (Group 3)'s Approach
 (Group members: Matt, Kimya, Conrad, Keagan, Connor, and Monica)
+
 Note: While I did take notes on my group's general thought process, I refined it to this finalized version of our approach as we made alterations. 
 * We began by installing/importing any packages needed, which we decided to be the 'latex2exp' and 'Metrics' packages. 
 * The first function we defined was a 'removeDuplicates' function. This function begins by creating an empty vector called duplicateVector, and it goes on to iterate through each entry in the provided dataframe. We used a series of if/else statements within a for loop to then determine if each pair of the rows were duplicates. After it has finished iterating, the function returns the subset of the provided dataframe that are not duplicates.
