@@ -68,3 +68,5 @@ In case study 2, we end up with large gaps in the discrete time series. Every ha
 ####
 
 ### Exercise 2.2: My Group's Approach
+
+## 
