@@ -51,17 +51,16 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 
 ### Excercise 2.1: My Group (Group 3)'s Approach
 (Group members: Matt, Kimya, Conrad, Keagan, Connor, and Monica)
-Note: While I did take notes on my group's general thought process, it led us to this final version of our approach. 
+Note: While I did take notes on my group's general thought process, I refined it to this finalized version of our approach as we made alterations. 
 * We began by installing/importing any packages needed, which we decided to be the 'latex2exp' and 'Metrics' packages. 
 * The first function we defined was a 'removeDuplicates' function. This function begins by creating an empty vector called duplicateVector, and it goes on to iterate through each entry in the provided dataframe. We used a series of if/else statements within a for loop to then determine if each pair of the rows were duplicates. After it has finished iterating, the function returns the subset of the provided dataframe that are not duplicates.
 * We then created a function called mergeDF, that combines all of the dataframes using merge.
 * Next, we made a function aggregateOverTime. We began by saving the time of the first period, and then we iterated over each row of the given dataframe and calculated the difference in time between the beginning of the period and the current row. We also generalized it so we could pick any variable and get the aggregated data. The end result of the function would be a vector of the average values of the variable being tracked, with zeroes in the vector for each period that the function skipped.
 * We also had 2 functions that converted units for some of our data.
-* As a culmination of all of these functions, we used them to give us what we wanted. We started by reading in each data file using the read.csv function. Next, we removed duplicates from each dataset using the removeDuplicates function we created above. Next, we used the mergeDF function that we created to get the merged original data and the merged de-duplicated data. 
-* Lastly, we plotted the data.
+* As a culmination of all of these functions, we used them to give us what we wanted. We started by reading in each data file using the read.csv function. Next, we removed duplicates from each dataset using the removeDuplicates function we created above. Next, we used the mergeDF function that we created to get the merged original data and the merged de-duplicated data.
 
 
-The notebook can be found here: https://colab.research.google.com/drive/15fXZXc7AF30C3SGUJpT0licCfGquLaKh
+The notebook for the code I described can be found here: https://colab.research.google.com/drive/15fXZXc7AF30C3SGUJpT0licCfGquLaKh
 
 ## Case Study 2: Working with FLUXNET Tower Data
 The second case study looked into FLUXNET tower data. This data consists of a network of towers that measure energy and gas fluctuations between the Earth's surface and the atmosphere. There are times when sensors malfunction, operations are interupted, or other factors that cause gaps in the datasets. Our goal with this case study is to figure out how to reconstruct missing data. 
