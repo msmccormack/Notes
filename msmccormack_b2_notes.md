@@ -61,7 +61,7 @@ The second case study looked into FLUXNET tower data. This data consists of a ne
 ### Gap Filling
 In case study 2, we end up with large gaps in the discrete time series. Every half an hour, we should have an observation; however, there are clearly lots of gaps. How do we fill in the gaps?
 * How do we model radiation?
-* * Modelling radiation depends a lot about time. 
+** Modelling radiation depends a lot about time. 
 
 ### Discussion Board Posts for Case Study 1:
 
