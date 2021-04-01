@@ -90,9 +90,9 @@ https://ieeexplore.ieee.org/document/8229730
 An Outlier is defined as "an observation that lies an abnormal distance from other values in a random sample from a population". Essentially, they are points that deviate substantially from the majority of the rest of the data and its trends. The most common/easy way to identify an outlier is by adding 1.5 times the interquartile range (IQR) to the third quartile and subtracting 1.5 times the IQR from the first quartile. Any data point outside of this new range is a suspected outlier. There are a variety of other criterion that can determine if a point is an outlier, such as Pierce's Criterion. To use Peirce's Criterion, you need to follow these steps (as found at https://www.statisticshowto.com/pierces-criterion/): 
 1. Find the mean and sample standard deviation for the entire set.
 2. Look up the value of R in a Peirce’s table that corresponds to the number of observations in your sample set. Begin by assuming one outlier, although you may repeat the process to discover more than one.
-3. Use the formula |$X_i$ – X_m| max= σ R to calculate the maximum allowable deviation.
-4. Calculate the actual deviation of your potential outliers. |X_i – X_m|
-5. Check if |Xi – Xm| > |Xi – Xm|max, and if it is, eliminate that outlier.
+3. Use the formula |X<sub>i</sub> – X<sub>m</sub>| max= σ R to calculate the maximum allowable deviation.
+4. Calculate the actual deviation of your potential outliers. |X<sub>i</sub> – X<sub>m</sub>|
+5. Check if |X<sub>i</sub> – X<sub>m</sub>| > |X<sub>i</sub> – X<sub>m</sub>|max, and if it is, eliminate that outlier.
 6. Now assume two outliers, and go through step 2-5 again. Keep the original number of measurements as well as the original values of the standard deviation and mean.
 7. If your calculations in step 6 give you another outlier, you can repeat the process. Assume an additional outlier each time through and use the original number of measurements, mean and standard deviation each time.
 8. Once all questionable data has been tested, calculate the mean and standard deviation again for your final data set.
