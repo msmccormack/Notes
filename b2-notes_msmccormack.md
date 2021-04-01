@@ -87,6 +87,17 @@ https://colab.research.google.com/drive/1AtH8dXyTebnm4fl9Amx0o4s9VZ6Wzsqk?usp=sh
 https://ieeexplore.ieee.org/document/8229730
 
 ## Background on Outliers
+An Outlier is defined as "an observation that lies an abnormal distance from other values in a random sample from a population". Essentially, they are points that deviate substantially from the majority of the rest of the data and its trends. The most common/easy way to identify an outlier is by adding 1.5 times the interquartile range (IQR) to the third quartile and subtracting 1.5 times the IQR from the first quartile. Any data point outside of this new range is a suspected outlier. There are a variety of other criterion that can determine if a point is an outlier, such as Pierce's Criterion. To use Peirce's Criterion, you need to follow these steps (as found at https://www.statisticshowto.com/pierces-criterion/): 
+1. Find the mean and sample standard deviation for the entire set.
+2. Look up the value of R in a Peirce’s table that corresponds to the number of observations in your sample set. Begin by assuming one outlier, although you may repeat the process to discover more than one.
+3. Use the formula |Xi – Xm| max= σ R to calculate the maximum allowable deviation.
+4. Calculate the actual deviation of your potential outliers. |Xi – Xm|
+5. Check if |Xi – Xm| > |Xi – Xm|max, and if it is, eliminate that outlier.
+6. Now assume two outliers, and go through step 2-5 again. Keep the original number of measurements as well as the original values of the standard deviation and mean.
+7. If your calculations in step 6 give you another outlier, you can repeat the process. Assume an additional outlier each time through and use the original number of measurements, mean and standard deviation each time.
+8. Once all questionable data has been tested, calculate the mean and standard deviation again for your final data set.
 
 
-Helpful links/sources for the above background information:
+Helpful links/sources for the above background information on outliers:
+https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm#:~:text=Definition%20of%20outliers,what%20will%20be%20considered%20abnormal
+https://www.statisticshowto.com/pierces-criterion/
