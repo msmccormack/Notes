@@ -65,21 +65,18 @@ The notebook for the code I described can be found here: https://colab.research.
 ## Case Study 2: Working with FLUXNET Tower Data
 The second case study looked into FLUXNET tower data. This data consists of a network of towers that measure energy and gas fluctuations between the Earth's surface and the atmosphere. There are times when sensors malfunction, operations are interupted, or other factors that cause gaps in the datasets. Our goal with this case study is to figure out how to reconstruct missing data. 
 
-### Gap Filling
-In case study 2, we end up with large gaps in the discrete time series. Every half an hour, we should have an observation; however, there are clearly lots of gaps.
-
 ### Exercise 2.2: My Group's Approach
 * My group has spent most of our time in class on exercise 2.1. Unfortunately at the time of writing these notes, we have not gotten incredibly far past the code snippets from Professor Davis at this link https://github.com/ds-wm/atsa-2021/blob/main/exercises/2.2/dt-woods_exercise_2-2.R , as well as from course notebook 2.
 
 ## Background on Data Duplication
-Data duplication is when there are multiple records present in a dataset that hold the same data. The excess entries provide no additional information, and are rather just redundant data; this can affect our analysis. To remedy data duplication, we turn to the process of data deduplication. Data deduplication is when "extra copies of the same data are deleted, leaving only one copy to be stored." Data deduplication helps minimize unnecessary repetition of data and rather keep only the data that is needed. Deduplication both speeds up computational functions (this impacts the efficiency of our analysis), and it makes sure that data isn't double-counted (this helps preserve the integrity of our analysis).
+Data duplication is when there are multiple records present in a dataset that hold the same data. The excess entries provide no additional information, and are rather just redundant data; this can affect our analysis. To remedy data duplication, we turn to the process of data deduplication. Data deduplication is when "extra copies of the same data are deleted, leaving only one copy to be stored." Data deduplication helps minimize unnecessary repetition of data and rather keep only the data that is needed. Deduplication both speeds up computational functions (this impacts the efficiency of our analysis), and it makes sure that data isn't double-counted (this helps preserve the integrity of our analysis). This challenge is present in many different areas, not just time series data. 
 
 Helpful links/sources for the above background information:
 https://www.druva.com/blog/a-simple-definition-what-is-data-deduplication/
 https://www.kaggle.com/rtatman/data-cleaning-challenge-deduplication
 
 ## Background on Gap Filling
-If time series data is missing datapoints, gaps can form in the overall dataset that restrict our analysis. The larger a gap is, the harder it can be to fill gaps with good data. Gaps in time series data can be filled in a variety of ways. According to RAVENDB, the most common form of gap filling is using data points on either side of the gap, and extrapolating to fill gaps with extra data points; this is called interpolation. The two interpolation methods that RAVENDB highlighted were nearest (add values equal to the value of the nearest entry) and linear (place the data points on a straight line between the entries on either side). However, the gap filling process really depends on the dataset and how much data is missing. An example of how an overall dataset impacts gap filling is in exercise 2; we use the gap-filling methodology described in the Global ecosystem Production in Space and Time (GePiSaT) model, which is a relatively complicated method. If we encountered this problem when working with other datasets that aren't as complex or with smaller gaps, we may be more inclined to use just the linear or nearest methods of interpolation.
+If time series data is missing datapoints, gaps can form in the overall dataset that restrict our analysis. The larger a gap is, the harder it can be to fill gaps with good data. Gaps in time series data can be filled in a variety of ways. According to RAVENDB, the most common form of gap filling is using data points on either side of the gap, and extrapolating to fill gaps with extra data points; this is called interpolation. The two interpolation methods that RAVENDB highlighted were nearest (add values equal to the value of the nearest entry) and linear (place the data points on a straight line between the entries on either side). However, the gap filling process really depends on the dataset and how much data is missing. An example of how an overall dataset impacts gap filling is in exercise 2; we use the gap-filling methodology described in the Global ecosystem Production in Space and Time (GePiSaT) model, which is a relatively complicated method. If we encountered this problem when working with other datasets that aren't as complex or with smaller gaps, we may be more inclined to use just the linear or nearest methods of interpolation. While this problem can manifest in other types of data, it is certainly most common and disruptive in time series data.
 
 Helpful links/sources for the above background information:
 https://ravendb.net/docs/article-page/5.1/csharp/document-extensions/timeseries/querying/gap-filling
@@ -96,8 +93,9 @@ An Outlier is defined as "an observation that lies an abnormal distance from oth
 6. Now assume two outliers, and go through step 2-5 again. Keep the original number of measurements as well as the original values of the standard deviation and mean.
 7. If your calculations in step 6 give you another outlier, you can repeat the process. Assume an additional outlier each time through and use the original number of measurements, mean and standard deviation each time.
 8. Once all questionable data has been tested, calculate the mean and standard deviation again for your final data set.
-
+Outliers affect many datasets, not just time series. Even in introductory statistics, we are told how outliers can be present in the simplest of datasets.
 
 Helpful links/sources for the above background information on outliers:
 https://www.itl.nist.gov/div898/handbook/prc/section1/prc16.htm#:~:text=Definition%20of%20outliers,what%20will%20be%20considered%20abnormal
 https://www.statisticshowto.com/pierces-criterion/
+https://mathworld.wolfram.com/Outlier.html
