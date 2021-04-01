@@ -52,7 +52,7 @@ look at each subsequent row and see if its within 7:30 minutes, if it is, add fa
 ### Excercise 2.1: My Group (Group 3)'s Approach
 (Group members: Matt, Kimya, Conrad, Keagan, Connor, and Monica)
 
-((Note: While I did take notes on my group's general thought process, I refined it to this finalized version of our approach as we made alterations.))
+((Note: I refined the notes I took on my group's approach to this finalized version, since we made a fair number of alterations.))
 * We began by installing/importing any packages needed, which we decided to be the 'latex2exp' and 'Metrics' packages. 
 * The first function we defined was a 'removeDuplicates' function. This function begins by creating an empty vector called duplicateVector, and it goes on to iterate through each entry in the provided dataframe. We used a series of if/else statements within a for loop to then determine if each pair of the rows were duplicates. After it has finished iterating, the function returns the subset of the provided dataframe that are not duplicates.
 * We then created a function called mergeDF, that combines all of the dataframes using merge.
@@ -66,14 +66,27 @@ The notebook for the code I described can be found here: https://colab.research.
 The second case study looked into FLUXNET tower data. This data consists of a network of towers that measure energy and gas fluctuations between the Earth's surface and the atmosphere. There are times when sensors malfunction, operations are interupted, or other factors that cause gaps in the datasets. Our goal with this case study is to figure out how to reconstruct missing data. 
 
 ### Gap Filling
-In case study 2, we end up with large gaps in the discrete time series. Every half an hour, we should have an observation; however, there are clearly lots of gaps. How do we fill in the gaps?
-* How do we model radiation?
-** Modelling radiation depends a lot about time. 
-
-### Discussion Board Posts for Case Study 1:
-
-####
+In case study 2, we end up with large gaps in the discrete time series. Every half an hour, we should have an observation; however, there are clearly lots of gaps.
 
 ### Exercise 2.2: My Group's Approach
+* My group has spent most of our time in class on exercise 2.1. Unfortunately at the time of writing these notes, we have not gotten incredibly far past the code snippets from Professor Davis at this link https://github.com/ds-wm/atsa-2021/blob/main/exercises/2.2/dt-woods_exercise_2-2.R , as well as from course notebook 2.
 
-## 
+## Background on Data Duplication
+Data duplication is when there are multiple records present in a dataset that hold the same data. The excess entries provide no additional information, and are rather just redundant data; this can affect our analysis. To remedy data duplication, we turn to the process of data deduplication. Data deduplication is when "extra copies of the same data are deleted, leaving only one copy to be stored." Data deduplication helps minimize unnecessary repetition of data and rather keep only the data that is needed. Deduplication both speeds up computational functions (this impacts the efficiency of our analysis), and it makes sure that data isn't double-counted (this helps preserve the integrity of our analysis).
+
+Helpful links/sources for the above background information:
+https://www.druva.com/blog/a-simple-definition-what-is-data-deduplication/
+https://www.kaggle.com/rtatman/data-cleaning-challenge-deduplication
+
+## Background on Gap Filling
+If time series data is missing datapoints, gaps can form in the overall dataset that restrict our analysis. The larger a gap is, the harder it can be to fill gaps with good data. Gaps in time series data can be filled in a variety of ways. According to RAVENDB, the most common form of gap filling is using data points on either side of the gap, and extrapolating to fill gaps with extra data points; this is called interpolation. The two interpolation methods that RAVENDB highlighted were nearest (add values equal to the value of the nearest entry) and linear (place the data points on a straight line between the entries on either side). However, the gap filling process really depends on the dataset and how much data is missing. An example of how an overall dataset impacts gap filling is in exercise 2; we use the gap-filling methodology described in the Global ecosystem Production in Space and Time (GePiSaT) model, which is a relatively complicated method. If we encountered this problem when working with other datasets that aren't as complex or with smaller gaps, we may be more inclined to use just the linear or nearest methods of interpolation.
+
+Helpful links/sources for the above background information:
+https://ravendb.net/docs/article-page/5.1/csharp/document-extensions/timeseries/querying/gap-filling
+https://colab.research.google.com/drive/1AtH8dXyTebnm4fl9Amx0o4s9VZ6Wzsqk?usp=sharing#scrollTo=ytX6uLYP6TOQ
+https://ieeexplore.ieee.org/document/8229730
+
+## Background on Outliers
+
+
+Helpful links/sources for the above background information:
